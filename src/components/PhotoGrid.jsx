@@ -1,13 +1,13 @@
 import React from "react";
 import Photo from "./Photo";
+import photos from "../data";
 
 const PhotoGrid = () => {
-  let photos = [0, 1, 2, 3, 4];
   return (
     <div className="m-20">
-      <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 gap-10">
+      <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 gap-5 relative">
         {photos.map((photo) => {
-          return <Photo photo={photo} />;
+          return <Photo key={photo.id} {...photo} />;
         })}
       </div>
     </div>
