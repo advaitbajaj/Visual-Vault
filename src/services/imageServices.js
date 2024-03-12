@@ -2,7 +2,7 @@ import axios from "axios";
 const API_KEY = process.env.REACT_APP_ACCESS_KEY;
 const BASE_URL = "https://api.unsplash.com/";
 
-const getPhotos = async (searchParams) => {
+const getPhotos = async (searchParams, pageNumber) => {
   let url;
   if (searchParams.query) {
     url = new URL("search/photos", BASE_URL);
@@ -13,10 +13,9 @@ const getPhotos = async (searchParams) => {
   url.search = new URLSearchParams({
     ...searchParams,
     client_id: API_KEY,
+    page: pageNumber,
     per_page: 12,
   });
-
-  console.log("URL:" + url);
 
   if (searchParams.query) {
     const { data } = await axios.get(url);

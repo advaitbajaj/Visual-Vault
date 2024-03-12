@@ -30,7 +30,7 @@ const Photo = ({
             </div>
           </div>
           <div>
-            <a href={portfolio_url}>
+            <a href={portfolio_url} target="blank">
               <img
                 src={medium}
                 height={2}
