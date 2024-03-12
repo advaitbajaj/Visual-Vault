@@ -13,12 +13,12 @@ const Search = ({ setQuery }) => {
   return (
     <div className="grid grid-cols-2 md:grid-cols-3">
       <div className="hidden px-6 my-auto md:block">
-        <h1 className="text-4xl text-[#CAF0F8]">Visual Vault</h1>
+        <h1 className="text-3xl lg:text-4xl text-[#CAF0F8]">Visual Vault</h1>
       </div>
       <div className="block px-6 my-auto md:hidden">
-        <img src={Logo} alt="logo" width={"100px"} />
+        <img src={Logo} alt="logo" className="w-[70px] sm:w-[100px]" />
       </div>
-      <div className="px-2 relative text-[#CAF0F8] text-lg">
+      <div className="px-2 relative text-[#CAF0F8] text-sm md:text-lg">
         <form
           className=" md:w-[400px] relative mt-4 mx-auto"
           onSubmit={getSearch}
