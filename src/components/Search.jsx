@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
+import Logo from "../assets/visual vault_logo.png";
 
 const Search = ({ setQuery }) => {
   const [search, setSearch] = useState("");
@@ -10,12 +11,18 @@ const Search = ({ setQuery }) => {
   };
 
   return (
-    <div className="grid md:grid-cols-3">
+    <div className="grid grid-cols-2 md:grid-cols-3">
       <div className="hidden px-6 my-auto md:block">
         <h1 className="text-4xl text-[#CAF0F8]">Visual Vault</h1>
       </div>
+      <div className="block px-6 my-auto md:hidden">
+        <img src={Logo} alt="logo" width={"100px"} />
+      </div>
       <div className="px-2 relative text-[#CAF0F8] text-lg">
-        <form className="w-[400px] relative mt-4 mx-auto" onSubmit={getSearch}>
+        <form
+          className=" md:w-[400px] relative mt-4 mx-auto"
+          onSubmit={getSearch}
+        >
           <div className="relative">
             <input
               type="search"
@@ -24,9 +31,9 @@ const Search = ({ setQuery }) => {
               onChange={(e) => {
                 setSearch(e.target.value);
               }}
-              className="w-full p-4 bg-transparent border-b-2 capitalize focus-visible:outline-none"
+              className="w-full p-4 bg-transparent border-[#CAF0F8] border-b-2 capitalize focus-visible:outline-none"
             />
-            <button className="absolute right-1 top-1/2 -translate-y-1/2 p-4 rounded-full hover:scale-125 transition ease-out">
+            <button className="absolute right-1 top-1/2 -translate-y-1/2 p-4 hover:scale-125 transition ease-out">
               <AiOutlineSearch size={25} />
             </button>
           </div>
