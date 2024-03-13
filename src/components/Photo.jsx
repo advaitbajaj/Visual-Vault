@@ -13,7 +13,7 @@ const Photo = ({
   links: { download },
 }) => {
   return (
-    <div className="bg-[#48CAE4] h-[45vh] relative shadow-[#48CAE4] shadow-md">
+    <div className="bg-[#48CAE4] h-[45vh] relative shadow-[#48CAE4] shadow-md hover:scale-105 transition ease-out">
       <a href={download} target="blnank">
         <img
           src={regular}
