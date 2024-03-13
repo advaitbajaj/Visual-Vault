@@ -10,15 +10,18 @@ const Photo = ({
     portfolio_url,
     profile_image: { medium },
   },
+  links: { download },
 }) => {
   return (
-    <div className="bg-[#48CAE4] h-[45vh] relative">
-      <img
-        src={regular}
-        className="w-full h-full object-cover"
-        alt={alt_description}
-      />
-      <div class="absolute inset-0 flex flex-col justify-end opacity-0 hover:opacity-100 transition duration-300 ease-in-out bg-slate-600 bg-opacity-50 text-white py-2 px-3">
+    <div className="bg-[#48CAE4] h-[45vh] relative shadow-[#48CAE4] shadow-md">
+      <a href={download} target="blnank">
+        <img
+          src={regular}
+          className="w-full h-full object-cover"
+          alt={alt_description}
+        />
+      </a>
+      <div class="absolute h-[25%] bottom-0 left-0 right-0 flex flex-col justify-end opacity-0 hover:opacity-100 transition duration-300 ease-in-out bg-slate-600 bg-opacity-50 text-white py-2 px-3">
         <div className="flex justify-between items-center">
           <div className="flex flex-col items-start justify-end">
             <span>{name}</span>
